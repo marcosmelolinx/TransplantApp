@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Login />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Login from './components/Login.vue'; // Importa o componente Login
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    Login // Usa o componente Login aqui
   }
 });
 </script>
