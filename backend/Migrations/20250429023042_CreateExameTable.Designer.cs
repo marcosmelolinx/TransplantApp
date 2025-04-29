@@ -11,7 +11,7 @@ using backend.Infrastructure.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250405164115_CreateExameTable")]
+    [Migration("20250429023042_CreateExameTable")]
     partial class CreateExameTable
     {
         /// <inheritdoc />
@@ -30,22 +30,18 @@ namespace backend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Paciente")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Profissional")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Tipo")
+                    b.Property<int?>("Tipo")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

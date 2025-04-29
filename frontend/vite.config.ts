@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 3000,
-    open: true,
+    host: true,    // <- adiciona essa linha
+    open: false,   // <- evita tentar abrir navegador dentro do container
   },
   build: {
     outDir: 'dist',
