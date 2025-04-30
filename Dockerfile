@@ -1,5 +1,5 @@
 # Etapa 1: Build do frontend (Vite)
-FROM node:20 AS frontend-build
+FROM node:20-alpine AS frontend-build
 WORKDIR /app/frontend
 
 # Copia o arquivo package.json e package-lock.json para o diretório de trabalho
