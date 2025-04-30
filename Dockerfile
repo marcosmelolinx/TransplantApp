@@ -16,7 +16,7 @@ COPY frontend/ ./
 # Isso vai copiar todos os arquivos da pasta frontend para o diretório /app/frontend dentro do container
 
 # Gera os arquivos de produção
-RUN npm run build
+RUN ls -la && npm run build
 
 
 # Etapa 2: Build do backend (.NET)
