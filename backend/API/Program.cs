@@ -72,6 +72,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 app.UseCors("AllowFrontend");
+app.MapFallbackToFile("index.html"); // <- Este é o ponto mais importante   
 app.MapControllers();
 
 app.Run();

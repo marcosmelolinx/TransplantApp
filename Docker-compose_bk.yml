@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3000:3000"  # frontend (vite dev server)
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "5001:5001"  # Mapeando a porta 5001 do container para a porta 5001 do host
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
