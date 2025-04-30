@@ -15,13 +15,13 @@ namespace backend.Migrations
                 name: "Exames",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "INTEGER", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Tipo = table.Column<int>(type: "INTEGER", nullable: true),
                     Nome = table.Column<string>(type: "TEXT", nullable: true),
                     Profissional = table.Column<string>(type: "TEXT", nullable: true),
                     Paciente = table.Column<string>(type: "TEXT", nullable: true),
-                    DataExame = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    DataExame = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>

@@ -8,12 +8,14 @@ namespace backend.Infrastructure.Data
     {
         public DbSet<Exame> Exames { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=Sqlite.db");
-    
+        // Construtor padrão para ser usado pelo EF Core
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
 
         public async Task CommitAsync()
-        {
+        {   
             await SaveChangesAsync();
         }
     }
