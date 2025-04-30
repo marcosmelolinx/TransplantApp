@@ -46,5 +46,8 @@ COPY --from=frontend-build /app/frontend/dist ./wwwroot/
 # Diretório de volume opcional para dados
 VOLUME /app/data
 
+ENV ASPNETCORE_HTTP_PORTS=5001
+ENV DOTNET_RUNNING_IN_CONTAINER=true
+
 # Inicia a aplicação ASP.NET
 ENTRYPOINT ["dotnet", "backend.dll"]
